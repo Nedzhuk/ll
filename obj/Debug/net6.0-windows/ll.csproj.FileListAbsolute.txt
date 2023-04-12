@@ -26,3 +26,5 @@ C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\MainPage.g.cs
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\Students.g.cs
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\MainPage.baml
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\Students.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\AddStudent.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\AddStudent.baml

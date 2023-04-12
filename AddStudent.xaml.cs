@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ll
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for AddStudent.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class AddStudent : Window
     {
-        public MainPage()
+        public AddStudent()
         {
             InitializeComponent();
-        }
-
-        private void Student_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Students());
         }
     }
 }
