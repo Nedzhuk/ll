@@ -62,11 +62,8 @@
             </Grid>
             <Button x:Name="History" Content="История закупок" Margin="8" Click="Student_Click" FontFamily="Book Antiqua" FontSize="24" 
                         Background="PeachPuff" BorderBrush="#99000000" BorderThickness="3" Grid.Row="2"/>
-            <Button x:Name="Extradition" Content="Выдача и возврат" Margin="8" Click="Student_Click" FontFamily="Book Antiqua" FontSize="24" 
-                        Background="PeachPuff" BorderBrush="#99000000" BorderThickness="3" Grid.Row="2" Grid.Column="1"/>
-            <Button x:Name="Remains" Content="Остатки каталога" Margin="8" Click="Student_Click" FontFamily="Book Antiqua" FontSize="24" 
-                        Background="PeachPuff" BorderBrush="#99000000" BorderThickness="3" Grid.Row="2" Grid.Column="2"/>
-
+            <Button x:Name="Extradition" Content="Выдача и возврат" Margin="8" Click="Student_Click" FontFamily="Book Antiqua" FontSize="24" Background="PeachPuff" BorderBrush="#99000000" BorderThickness="3" Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="Remains" Content="Остатки каталога" Margin="8" Click="Student_Click" FontFamily="Book Antiqua" FontSize="24" Background="PeachPuff" BorderBrush="#99000000" BorderThickness="3" Grid.Row="2" Grid.Column="2"/>
         </Grid>
     </Grid>
 </Window>
