@@ -24,5 +24,10 @@ namespace ll
         {
             InitializeComponent();
         }
+
+        private void Student_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
