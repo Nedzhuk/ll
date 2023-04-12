@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Nadezhdin\source\repos\ll\App.xaml
-11407045341
+3-991456643
 1-297416844
-6-630650277
+8-512754924
 194-1617825143
-MainWindow.xaml;
+MainPage.xaml;MainWindow.xaml;Students.xaml;
 
-False
+True
 

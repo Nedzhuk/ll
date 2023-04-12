@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace ll
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Students.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Students : Page
     {
-        public MainWindow()
+        public Students()
         {
             InitializeComponent();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new MainPage());
-        }
-        
     }
 }
