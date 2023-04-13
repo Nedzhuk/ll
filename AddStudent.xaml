@@ -10,7 +10,6 @@
         BorderThickness="1"
         Title="AddStudent" Height="400" Width="250"
         WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
-
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -135,12 +134,5 @@
         <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="4" Text="Телефон" Width="200" FontSize="16" TextChanged="Search_TextChanged4" FontFamily="Book Antiqua" Foreground="#666666"/>
         <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="5" Text="Адрес" Width="200" FontSize="16" TextChanged="Search_TextChanged5" FontFamily="Book Antiqua" Foreground="#666666"/>
         <Button Style="{DynamicResource ButtonStyle}" Content="Добавить" Margin="50,10,50,5" Grid.Row="6" Click="Button_Click" />
-        <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="119*"/>
-        </Grid.RowDefinitions>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Информация о студенте" VerticalAlignment="Center" Width="366" FontSize="20" FontFamily="Book Antiqua"/>
-
-        </Grid>
+    </Grid>
 </Window>
