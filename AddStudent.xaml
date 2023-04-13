@@ -43,7 +43,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                        <Border x:Name="border" Background="White" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -53,6 +53,7 @@
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#e6e6e6"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="#99000000"/>
+                                <Setter Property="TextElement.FontWeight" TargetName="contentPresenter" Value="Bold"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#a8a8a8"/>
@@ -70,7 +71,7 @@
         </Style>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FFABAdB3"/>
-        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FFABAdB3"/>
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
             <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
@@ -96,7 +97,6 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="#f5f5f5"/>
                             </Trigger>
                             <Trigger Property="IsKeyboardFocused" Value="true">
-                                <Setter Property="Background" Value="#b3b3b3"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="black"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -113,6 +113,61 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="FocusVisual1">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background1" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border1" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
+        <Style x:Key="ButtonClose" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background1}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border1}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="transparent" BorderBrush="transparent" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="transparent"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="transparent"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="transparent"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="transparent"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Effect>
         <DropShadowEffect BlurRadius="50" ShadowDepth="-90"/>
@@ -128,11 +183,21 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Label HorizontalAlignment="Center" Content="Новый студент" VerticalAlignment="Center" FontSize="20" FontFamily="Book Antiqua"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="1" Text="Фамилия" Width="200" FontSize="16" TextChanged="Search_TextChanged1" FontFamily="Book Antiqua" Foreground="#666666"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="2" Text="Имя" Width="200" FontSize="16" TextChanged="Search_TextChanged2" FontFamily="Book Antiqua" Foreground="#666666"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="3" Text="Группа" Width="200" FontSize="16" TextChanged="Search_TextChanged3" FontFamily="Book Antiqua" Foreground="#666666"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="4" Text="Телефон" Width="200" FontSize="16" TextChanged="Search_TextChanged4" FontFamily="Book Antiqua" Foreground="#666666"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="5" Text="Адрес" Width="200" FontSize="16" TextChanged="Search_TextChanged5" FontFamily="Book Antiqua" Foreground="#666666"/>
+        <TextBox x:Name="surname" HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="1" Text="Фамилия" Width="200" FontSize="16" TextChanged="Search_TextChanged1" FontFamily="Book Antiqua" Foreground="#666666"/>
+        <TextBox x:Name="name" HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="2" Text="Имя" Width="200" FontSize="16" TextChanged="Search_TextChanged2" FontFamily="Book Antiqua" Foreground="#666666"/>
+        <TextBox x:Name="group" HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="3" Text="Группа" Width="200" FontSize="16" TextChanged="Search_TextChanged3" FontFamily="Book Antiqua" Foreground="#666666"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="4" Text="Телефон" Width="200" FontSize="16" TextChanged="Search_TextChanged4" FontFamily="Book Antiqua" Foreground="#666666"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Center" Margin="0,10,0,10" Grid.Row="5" Text="Адрес" Width="200" FontSize="16" TextChanged="Search_TextChanged5" FontFamily="Book Antiqua" Foreground="#666666"/>
         <Button Style="{DynamicResource ButtonStyle}" Content="Добавить" Margin="50,10,50,5" Grid.Row="6" Click="Button_Click" />
+        <Button Style="{DynamicResource ButtonClose}" Content="&#10006;" HorizontalAlignment="Left" Margin="223,-1,0,0" VerticalAlignment="Top" Height="26" Width="22" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1" FontSize="16">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-45.959"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

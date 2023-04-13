@@ -71,8 +71,48 @@ namespace ll
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            AddStudent window = new AddStudent();
+            List<string> lines = File.ReadAllLines(_path).ToList();
+            List<StudentInfo> students = new();
+
+            for (int i = 0; i < lines.Count; i++)
+            {
+                string[] strings = lines[i].Split(".");
+                students.Add(new()
+                {
+                    Id = Convert.ToInt32(strings[0]),
+                    Surname = strings[1],
+                    Name = strings[2],
+                    Group = strings[3],
+                    Phone = strings[4],
+                    Adress = strings[5]
+                });
+            }
+            
+            AddStudent window = new AddStudent(students.Last().Id);
+            window.Closed += Window_Closed;
             window.Show();
+        }
+
+        private void Window_Closed(object? sender, EventArgs e)
+        {
+            List<string> lines = File.ReadAllLines(_path).ToList();
+            List<StudentInfo> students = new();
+
+            for (int i = 0; i < lines.Count; i++)
+            {
+                string[] strings = lines[i].Split(".");
+                students.Add(new()
+                {
+                    Id = Convert.ToInt32(strings[0]),
+                    Surname = strings[1],
+                    Name = strings[2],
+                    Group = strings[3],
+                    Phone = strings[4],
+                    Adress = strings[5]
+                });
+            }
+            Data.ItemsSource = students;
+            Search.Text = string.Empty;
         }
     }
 }
