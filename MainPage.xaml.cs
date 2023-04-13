@@ -29,5 +29,10 @@ namespace ll
         {
             this.NavigationService.Navigate(new Students());
         }
+
+        private void Catalog_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Catalog());
+        }
     }
 }

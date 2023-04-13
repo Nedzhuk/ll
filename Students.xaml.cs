@@ -114,5 +114,10 @@ namespace ll
             Data.ItemsSource = students;
             Search.Text = string.Empty;
         }
+
+        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
