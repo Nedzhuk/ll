@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,26 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ll
 {
     /// <summary>
-    /// Interaction logic for Catalog.xaml
+    /// Логика взаимодействия для SaleBook.xaml
     /// </summary>
-    public partial class Catalog : Page
+    public partial class SaleBook : Page
     {
         public struct BookInfo
         {
             public string Автор { get; set; }
             public string Название { get; set; }
-            public string Жанр { get; set; }
-            public string Номер { get; set; }
-            public string Издание { get; set; }
-            public string Страницы { get; set; }
+            public int Цена { get; set; }
         }
-        public Catalog() =>
+        private readonly string _path = "SaleBooks.txt";
+        public SaleBook()
+        {
             InitializeComponent();
-        private string _path = "Catalog.txt";
+        }
+
+        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
         private void Data_Loaded(object sender, RoutedEventArgs e)
         {
             List<string> lines = File.ReadAllLines(_path).ToList();
@@ -45,13 +49,15 @@ namespace ll
                 {
                     Автор = strings[0],
                     Название = strings[1],
-                    Жанр = strings[2],
-                    Номер = strings[3],
-                    Издание = strings[4],
-                    Страницы = strings[5]
+                    Цена = Convert.ToInt32(strings[2]),
                 });
             }
             Data.ItemsSource = books;
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
@@ -62,26 +68,19 @@ namespace ll
             for (int i = 0; i < lines.Count; i++)
             {
                 string[] strings = lines[i].Split(".");
-                BookInfo book = new ()
+                BookInfo book = new()
                 {
                     Автор = strings[0],
                     Название = strings[1],
-                    Жанр = strings[2],
-                    Номер = strings[3],
-                    Издание = strings[4],
-                    Страницы = strings[5]
+                    Цена = Convert.ToInt32(strings[2]),
                 };
                 if (book.Название.ToLower().Contains(Search.Text.ToLower()))
                     books.Add(book);
             }
             Data.ItemsSource = books;
         }
-        private void Data_SizeChanged(object sender, SizeChangedEventArgs e) => 
-            Data.MinColumnWidth = Data.ActualWidth / 6;
 
-        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        private void Data_SizeChanged(object sender, SizeChangedEventArgs e) =>
+            Data.MinColumnWidth = Data.ActualWidth / 3;
     }
 }

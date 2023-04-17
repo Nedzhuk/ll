@@ -29,6 +29,10 @@ namespace ll
         {
             MainFrame.Navigate(new MainPage());
         }
-        
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
