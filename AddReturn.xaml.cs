@@ -1,17 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ll
 {
@@ -63,9 +56,7 @@ namespace ll
         private string _pathCatalog = "Catalog.txt";
         private string _pathStudent = "Students.txt";
 
-        string wSurname;
-        string wName;
-        string wGroup;
+        string wID;
         string wNameBook;
         string wCount;
 
@@ -77,6 +68,49 @@ namespace ll
             DragMove();
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> lines2 = File.ReadAllLines(_pathBookStud).ToList();
+            List<BookStudInfo> stBook = new();
+
+            for (int j = 0; j < lines2.Count; j++)
+            {
+                string[] strings1 = lines2[j].Split("!");
+                stBook.Add(new()
+                {
+                    НомерСтудента = strings1[0],
+                    НомерКниги = strings1[1],
+                    Количество = strings1[2],
+                    ДатаВыдачи = Convert.ToDateTime(strings1[3])
+                });
+                if ()
+                {
+                    retBook.НомерСтудента = stBook[j].НомерСтудента;
+                    retBook.НомерКниги = stBook[j].НомерКниги;
+                    retBook.Количество = stBook[j].Количество;
+                    retBook.ДатаВыдачи = stBook[j].ДатаВыдачи;
+                }
+            }
+            retBook.ДатаВозврата = DateTime.Now;
+            if (retBook.НомерСтудента != null &&
+                retBook.НомерКниги != null &&
+                retBook.Количество != null)
+                File.AppendAllText(_pathReturn, retBook.ToString());
+
+            Close();
+        }
+
+        private void Search_TextChanged1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+
+        private void Search_TextChanged2(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Search_TextChanged3(object sender, TextChangedEventArgs e)
         {
             List<string> lines1 = File.ReadAllLines(_pathStudent).ToList();
             List<StudentInfo> students = new();
@@ -93,50 +127,13 @@ namespace ll
                     Phone = strings[4],
                     Adress = strings[5]
                 });
-                if (wSurname == students[i].Surname.ToLower() &&
-                    wName == students[i].Name.ToLower() &&
-                    wGroup == students[i].Group.ToLower())
-                {
-                    List<string> lines2 = File.ReadAllLines(_pathBookStud).ToList();
-                    List<BookStudInfo> stBook = new();
-
-                    for (int j = 0; j < lines2.Count; j++)
-                    {
-                        string[] strings1 = lines2[j].Split("!");
-                        stBook.Add(new()
-                        {
-                            НомерСтудента = strings1[0],
-                            НомерКниги = strings1[1],
-                            Количество = strings1[2],
-                            ДатаВыдачи = Convert.ToDateTime(strings1[3])
-                        });
-                        if (stBook[j].НомерСтудента == students[i].Id && stBook[j].НомерКниги == wNameBook && stBook[j].Количество==wCount)
-                        {
-                            retBook.НомерСтудента = stBook[j].НомерСтудента;
-                            retBook.НомерКниги = stBook[j].НомерКниги;
-                            retBook.Количество = stBook[j].Количество;
-                            retBook.ДатаВыдачи = stBook[j].ДатаВыдачи;
-                        }
-                    }
-                }
+                if (students[i].Group.ToLower() == group.Text.ToLower() &&
+                    students[i].Surname.ToLower() == surname.Text.ToLower() &&
+                    students[i].Name.ToLower() == name.Text.ToLower())
+                    wID = students[i].Id;
             }
-            retBook.ДатаВозврата = DateTime.Now;
-            if (retBook.НомерСтудента != null &&
-                retBook.НомерКниги != null &&
-                retBook.Количество != null)
-                File.AppendAllText(_pathReturn, retBook.ToString());
-
-            Close();
         }
 
-        private void Search_TextChanged1(object sender, TextChangedEventArgs e) =>
-            wSurname = surname.Text.ToLower();
-
-        private void Search_TextChanged2(object sender, TextChangedEventArgs e) =>
-            wName = name.Text.ToLower();
-
-        private void Search_TextChanged3(object sender, TextChangedEventArgs e) =>
-            wGroup = group.Text.ToLower();
 
         private void Search_TextChanged4(object sender, TextChangedEventArgs e)
         {
