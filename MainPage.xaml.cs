@@ -49,5 +49,10 @@ namespace ll
         {
             this.NavigationService.Navigate(new BookStud());
         }
+
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Return());
+        }
     }
 }

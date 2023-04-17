@@ -119,5 +119,10 @@ namespace ll
         {
 
         }
+
+        private void Data_LoadedRet(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

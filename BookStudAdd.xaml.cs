@@ -48,30 +48,29 @@ namespace ll
         private string _pathPurchases = "BookStud.txt";
         string wSurname;
         string wName;
-        string wNameBook;
         string wGroup;
         BookStudInfo BSnew = new();
         public BookStudAdd() =>
             InitializeComponent();
-        public void tmp()
-        {
-            List<string> lines2 = File.ReadAllLines(_pathCatalog).ToList();
-            List<BookInfo> books = new();
+        //public void tmp()
+        //{
+        //    List<string> lines2 = File.ReadAllLines(_pathCatalog).ToList();
+        //    List<BookInfo> books = new();
 
-            for (int i = 0; i < lines2.Count; i++)
-            {
-                string[] strings = lines2[i].Split(".");
-                books.Add(new()
-                {
-                    Автор = strings[0],
-                    Название = strings[1],
-                    Жанр = strings[2],
-                    Номер = strings[3],
-                    Издание = strings[4],
-                    Страницы = strings[5]
-                });
-            }
-        }
+        //    for (int i = 0; i < lines2.Count; i++)
+        //    {
+        //        string[] strings = lines2[i].Split(".");
+        //        books.Add(new()
+        //        {
+        //            Автор = strings[0],
+        //            Название = strings[1],
+        //            Жанр = strings[2],
+        //            Номер = strings[3],
+        //            Издание = strings[4],
+        //            Страницы = strings[5]
+        //        });
+        //    }
+        //}
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
             DragMove();
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -108,10 +107,8 @@ namespace ll
         private void Search_TextChanged2(object sender, TextChangedEventArgs e) =>
             wName = name.Text.ToLower();
 
-        private void Search_TextChanged3(object sender, TextChangedEventArgs e)
-        {
+        private void Search_TextChanged3(object sender, TextChangedEventArgs e) =>
             wGroup = group.Text.ToLower();
-        }
 
         private void Search_TextChanged4(object sender, TextChangedEventArgs e)
         {

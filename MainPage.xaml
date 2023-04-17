@@ -142,7 +142,7 @@
                 </Grid.RowDefinitions>
                 <Button x:Name="Student" Content="Студенты" Click="Student_Click"/>
                 <Button x:Name="Book" Content="Выданные книги" Click="Book_Click" Grid.Column="1" Cursor="Hand"/>
-                <Button x:Name="Return" Content="Возврат" Click="Student_Click" Grid.Column="2">
+                <Button x:Name="Return" Content="Возврат" Click="Return_Click" Grid.Column="2" Cursor="Hand">
                 </Button>
                 <Button x:Name="Sale" Content="Цена" Click="Sale_Click" Grid.Row="1" />
                 <Button x:Name="Purchases" Content="Закупки" Click="Purchases_Click" Grid.Row="1" Grid.Column="1"/>

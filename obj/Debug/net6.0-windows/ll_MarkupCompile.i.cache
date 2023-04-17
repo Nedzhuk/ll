@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\шечковано\Source\Repos\ll\App.xaml
-81045423177
-52023944000
-131131851241
+102025106850
+61498339538
+151802250389
 1941709816142
-AddStudent.xaml;BookStud.xaml;BookStudAdd.xaml;Catalog.xaml;MainPage.xaml;MainWindow.xaml;SaleBook.xaml;Students.xaml;
+AddReturn.xaml;AddStudent.xaml;BookStud.xaml;BookStudAdd.xaml;Catalog.xaml;MainPage.xaml;MainWindow.xaml;Return.xaml;SaleBook.xaml;Students.xaml;
 
-True
+False
 

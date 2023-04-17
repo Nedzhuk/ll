@@ -68,3 +68,7 @@ C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\BookStud.g.
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\BookStud.baml
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\BookStudAdd.g.cs
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\BookStudAdd.baml
+C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\AddReturn.g.cs
+C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\Return.g.cs
+C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\AddReturn.baml
+C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\Return.baml

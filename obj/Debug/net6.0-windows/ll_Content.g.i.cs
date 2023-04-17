@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/net6.0-windows/catalog.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/net6.0-windows/returnbook.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/net6.0-windows/salebooks.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/net6.0-windows/students.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/net6.0-windows/bookstud.txt")]

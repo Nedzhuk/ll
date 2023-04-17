@@ -28,29 +28,12 @@ namespace ll
             public int Количество { get; set; }
             public DateTime ДатаВыдачи { get; set; }
         }
-        //private readonly string _pathStudent = "Students.txt";
-        //private string _pathCatalog = "Catalog.txt";
         private string _pathPurchases = "BookStud.txt";
         public BookStud() =>
             InitializeComponent();
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            //List<string> lines = File.ReadAllLines(_pathPurchases).ToList();
-            //List<BookStudInfo> students = new();
-
-            //for (int i = 0; i < lines.Count; i++)
-            //{
-            //    string[] strings = lines[i].Split("!");
-            //    students.Add(new()
-            //    {
-            //        НомерСтудента = strings[0],
-            //        НомерКниги = strings[1],
-            //        Количество = Convert.ToInt32(strings[2]),
-            //        ДатаВыдачи = Convert.ToDateTime(strings[3])
-            //    });
-            //}
-
             BookStudAdd window = new BookStudAdd();
             window.Closed += Window_Closed;
             window.Show();
@@ -98,11 +81,6 @@ namespace ll
         private void Data_SizeChanged(object sender, SizeChangedEventArgs e) =>
             Data.MinColumnWidth = Data.ActualWidth / 4;
 
-        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<string> lines = File.ReadAllLines(_pathPurchases).ToList();
@@ -122,6 +100,11 @@ namespace ll
                     students.Add(student);
             }
             Data.ItemsSource = students;
+        }
+
+        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
