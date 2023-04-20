@@ -16,21 +16,16 @@ using System.Windows.Shapes;
 namespace ll
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для DELETE.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DELETE : Page
     {
-        public MainWindow()
+        public DELETE()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new MainPage());
-        }
-
-        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

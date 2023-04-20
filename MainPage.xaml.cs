@@ -34,5 +34,25 @@ namespace ll
         {
             this.NavigationService.Navigate(new Catalog());
         }
+
+        private void Sale_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new SaleBook());
+        }
+
+        private void Purchases_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Book_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new BookStud());
+        }
+
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Return());
+        }
     }
 }
