@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ll
 {
-    /// <summary>
-    /// Логика взаимодействия для BookStud.xaml
-    /// </summary>
     public partial class BookStud : Page
     {
         public struct BookStudInfo
