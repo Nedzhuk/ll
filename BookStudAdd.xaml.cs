@@ -52,25 +52,6 @@ namespace ll
         BookStudInfo BSnew = new();
         public BookStudAdd() =>
             InitializeComponent();
-        //public void tmp()
-        //{
-        //    List<string> lines2 = File.ReadAllLines(_pathCatalog).ToList();
-        //    List<BookInfo> books = new();
-
-        //    for (int i = 0; i < lines2.Count; i++)
-        //    {
-        //        string[] strings = lines2[i].Split(".");
-        //        books.Add(new()
-        //        {
-        //            Автор = strings[0],
-        //            Название = strings[1],
-        //            Жанр = strings[2],
-        //            Номер = strings[3],
-        //            Издание = strings[4],
-        //            Страницы = strings[5]
-        //        });
-        //    }
-        //}
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
             DragMove();
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -96,7 +77,9 @@ namespace ll
                     BSnew.НомерСтудента = Convert.ToString(students[i].Id);
             }
             BSnew.ДатаВыдачи = DateTime.Now;
-            File.AppendAllText(_pathPurchases, BSnew.ToString());
+            if(BSnew.НомерСтудента != null &&
+                BSnew.НомерКниги != null &&
+                BSnew.Количество != null) File.AppendAllText(_pathPurchases, BSnew.ToString());
 
             Close();
         }

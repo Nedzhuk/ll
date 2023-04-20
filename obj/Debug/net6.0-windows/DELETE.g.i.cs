@@ -77,7 +77,7 @@ namespace ll {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ll;V1.0.0.0;component/delete.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ll;component/delete.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DELETE.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
