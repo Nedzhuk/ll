@@ -29,5 +29,30 @@ namespace ll
         {
 
         }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void returnd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Data_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Data_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
+        }
+
+        private void Data_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

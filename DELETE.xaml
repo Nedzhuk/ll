@@ -72,8 +72,8 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <TextBox x:Name="Search" Margin="16" FontSize="16" TextChanged="Search_TextChanged"/>
-            <Button x:Name="returnd" HorizontalAlignment="Right" Margin="16" Padding="4" FontSize="16" Content="Сделать возврат" Click="Add_Click"/>
+            <Button x:Name="returnd" HorizontalAlignment="Right" Margin="16" Padding="4" FontSize="16" Content="Сделать возврат" Click="returnd_Click"/>
         </StackPanel>
-        <DataGrid x:Name="Data" Grid.Row="1" FontSize="16" Loaded="Data_Loaded" SizeChanged="Data_SizeChanged" SelectionChanged="Data_SelectionChanged"/>
+        <DataGrid x:Name="Data" Grid.Row="1" FontSize="16" Loaded="Data_Loaded"  SizeChanged="Data_SizeChanged"  SelectionChanged="Data_SelectionChanged_1"/>
     </Grid>
 </Page>
