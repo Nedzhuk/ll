@@ -20,39 +20,25 @@ namespace ll
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
-        {
+        public MainPage() =>
             InitializeComponent();
-        }
 
-        private void Student_Click(object sender, RoutedEventArgs e)
-        {
+        private void Student_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new Students());
-        }
 
-        private void Catalog_Click(object sender, RoutedEventArgs e)
-        {
+        private void Catalog_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new Catalog());
-        }
 
-        private void Sale_Click(object sender, RoutedEventArgs e)
-        {
+        private void Sale_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new SaleBook());
-        }
 
-        private void Purchases_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        private void Purchases_Click(object sender, RoutedEventArgs e) =>
+            this.NavigationService.Navigate(new Purchases());
 
-        private void Book_Click(object sender, RoutedEventArgs e)
-        {
+        private void Book_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new BookStud());
-        }
 
-        private void Return_Click(object sender, RoutedEventArgs e)
-        {
+        private void Return_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new Return());
-        }
     }
 }

@@ -77,7 +77,7 @@ namespace ll {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ll;V1.0.0.0;component/return.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ll;component/return.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Return.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

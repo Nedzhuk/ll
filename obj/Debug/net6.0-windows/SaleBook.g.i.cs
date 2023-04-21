@@ -69,7 +69,7 @@ namespace ll {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ll;V1.0.0.0;component/salebook.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ll;component/salebook.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SaleBook.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

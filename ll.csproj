@@ -14,8 +14,10 @@
 
   <ItemGroup>
     <Content Include="bin\Debug\net6.0-windows\Catalog.txt" />
+    <Content Include="bin\Debug\net6.0-windows\Purchases.txt" />
     <Content Include="bin\Debug\net6.0-windows\ReturnBook.txt" />
     <Content Include="bin\Debug\net6.0-windows\SaleBooks.txt" />
+    <Content Include="bin\Debug\net6.0-windows\Staff.txt" />
     <Content Include="bin\Debug\net6.0-windows\Students.txt" />
     <Content Include="bin\Debug\net6.0-windows\BookStud.txt" />
     <Content Include="Resources\library.ico" />

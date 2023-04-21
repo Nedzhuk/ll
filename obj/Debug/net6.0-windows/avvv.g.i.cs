@@ -77,7 +77,7 @@ namespace ll {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ll;V1.0.0.0;component/avvv.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ll;component/avvv.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\avvv.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

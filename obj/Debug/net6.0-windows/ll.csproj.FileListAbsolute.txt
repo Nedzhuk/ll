@@ -84,3 +84,9 @@ C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\Return.baml
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\SaleBook.baml
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\avvv.g.cs
 C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\avvv.baml
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\avvv.g.cs
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\avvv.baml
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\Purchases.g.cs
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\Purchases.baml
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\AddPurchases.g.cs
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\AddPurchases.baml

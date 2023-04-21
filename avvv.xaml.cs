@@ -33,8 +33,7 @@ namespace ll
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             List<string> line = File.ReadAllLines(_path).ToList();
-            List<Enter> wUsers = new();
-            for (int i = 0; i < line.Count - 1; i++)
+            for (int i = 0; i < line.Count; i++)
             {
                 string[] strings = line[i].Split("!");
                 Enter user = new()

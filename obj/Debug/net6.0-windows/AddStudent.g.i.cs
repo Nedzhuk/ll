@@ -93,7 +93,7 @@ namespace ll {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ll;V1.0.0.0;component/addstudent.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ll;component/addstudent.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddStudent.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
