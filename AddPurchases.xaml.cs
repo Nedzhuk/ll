@@ -26,10 +26,11 @@ namespace ll
             public string Count { get; set; }
             public string Staff { get; set; }
             public DateTime DatePurch { get; set; }
+            public int bookSale;
 
             public override string ToString()
             {
-                return $"{idBook}!{Count}!{Staff}!{DatePurch}\n";
+                return $"{idBook}!{Count}!{Staff}!{DatePurch}!{bookSale}\n";
             }
         }
         public struct BookInfo
@@ -43,6 +44,13 @@ namespace ll
             public string password { get; set; }
 
         }
+        public struct BookSaleInfo
+        {
+            public string Автор { get; set; }
+            public string Название { get; set; }
+            public int Цена { get; set; }
+        }
+        private readonly string _pathSale = "SaleBooks.txt";
         private string _path = "Purchases.txt";
         private string _pathCatalog = "Catalog.txt";
         private string _pathStaff = "Staff.txt";
@@ -98,6 +106,23 @@ namespace ll
                     ad.idBook = books[i].Номер;
             }
             ad.DatePurch = DateTime.Now;
+
+            //тут будет цена
+            List<string> linesses = File.ReadAllLines(_pathSale).ToList();
+
+            for (int i = 0; i < linesses.Count - 1; i++)
+            {
+                string[] stringses = linesses[i].Split(".");
+                BookSaleInfo bookSale = new()
+                {
+                    Автор = stringses[0],
+                    Название = stringses[1],
+                    Цена = Convert.ToInt32(stringses[2]),
+                };
+                if (book.Text.ToLower() == bookSale.Название.ToLower())
+                    ad.bookSale = Convert.ToInt32(ad.Count) * bookSale.Цена;
+            }
+
             if (ad.idBook != null &&
                 ad.Staff != null)
                 File.AppendAllText(_path, ad.ToString());

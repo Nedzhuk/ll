@@ -40,5 +40,8 @@ namespace ll
 
         private void Return_Click(object sender, RoutedEventArgs e) =>
             this.NavigationService.Navigate(new Return());
+
+        private void WriteOffs_Click(object sender, RoutedEventArgs e) =>
+            this.NavigationService.Navigate(new WriteOffs());
     }
 }

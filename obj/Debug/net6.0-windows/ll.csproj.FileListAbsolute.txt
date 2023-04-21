@@ -90,3 +90,5 @@ C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\Purchases.g
 C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\Purchases.baml
 C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\AddPurchases.g.cs
 C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\AddPurchases.baml
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\WriteOffs.g.cs
+C:\Users\шечковано\source\repos\ll\obj\Debug\net6.0-windows\WriteOffs.baml

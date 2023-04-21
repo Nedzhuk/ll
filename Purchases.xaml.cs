@@ -18,6 +18,7 @@ namespace ll
             public string Count { get; set; }
             public string Staff { get; set; }
             public DateTime DatePurch { get; set; }
+            public int sale;
         }
         private string _path = "Purchases.txt";
         public Purchases() =>

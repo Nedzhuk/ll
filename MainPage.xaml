@@ -146,7 +146,7 @@
                 </Button>
                 <Button x:Name="Sale" Content="Цена" Click="Sale_Click" Grid.Row="1" />
                 <Button x:Name="Purchases" Content="Закупки" Click="Purchases_Click" Grid.Row="1" Grid.Column="1" Cursor="Hand"/>
-                <Button x:Name="WriteOffs" Content="Списания" Click="Student_Click" Grid.Row="1" Grid.Column="2"/>
+                <Button x:Name="WriteOffs" Content="Списания" Click="WriteOffs_Click" Grid.Row="1" Grid.Column="2" Cursor="Hand"/>
                 <Button x:Name="Catalog" Content="Каталог книг" Click="Catalog_Click" Grid.Row="2" Grid.Column="1"/>
             </Grid>
         </Border>
