@@ -61,7 +61,7 @@ namespace ll
         string wCount;
 
         ReturnBookInfo retBook = new();
-        public AddReturn() =>
+        public AddReturn() => 
             InitializeComponent();
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
@@ -69,20 +69,64 @@ namespace ll
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            List<string> lines2 = File.ReadAllLines(_pathBookStud).ToList();
+            List<string> lines1 = File.ReadAllLines(_pathStudent).ToList();
+            List<StudentInfo> students = new();
+
+            for (int i = 0; i < lines1.Count; i++)
+            {
+                string[] strings = lines1[i].Split(".");
+                students.Add(new()
+                {
+                    Id = strings[0],
+                    Surname = strings[1].ToLower(),
+                    Name = strings[2],
+                    Group = strings[3],
+                    Phone = strings[4],
+                    Adress = strings[5]
+                });
+                if (students[i].Group.ToLower() == group.Text.ToLower() &&
+                    students[i].Surname.ToLower() == surname.Text.ToLower() &&
+                    students[i].Name.ToLower() == name.Text.ToLower())
+                    wID = students[i].Id;
+            }
+            //Проверка на существование студента в общей базе (то что выше)
+
+            List<string> lines2 = File.ReadAllLines(_pathCatalog).ToList();
+            List<BookInfo> books = new();
+
+            for (int i = 0; i < lines2.Count; i++)
+            {
+                string[] strings = lines2[i].Split(".");
+                books.Add(new()
+                {
+                    Автор = strings[0],
+                    Название = strings[1],
+                    Жанр = strings[2],
+                    Номер = strings[3],
+                    Издание = strings[4],
+                    Страницы = strings[5]
+                });
+                if (books[i].Название.ToLower().Contains(nameBook.Text.ToLower()))
+                    wNameBook = books[i].Номер;
+            }
+            //Проверка на существование книги в общей базе (то что выше)
+
+            List<string> lines3 = File.ReadAllLines(_pathBookStud).ToList();
             List<BookStudInfo> stBook = new();
 
-            for (int j = 0; j < lines2.Count; j++)
+            for (int j = 0; j < lines3.Count; j++)
             {
-                string[] strings1 = lines2[j].Split("!");
+                string[] strings = lines3[j].Split("!");
                 stBook.Add(new()
                 {
-                    НомерСтудента = strings1[0],
-                    НомерКниги = strings1[1],
-                    Количество = strings1[2],
-                    ДатаВыдачи = Convert.ToDateTime(strings1[3])
+                    НомерСтудента = strings[0],
+                    НомерКниги = strings[1],
+                    Количество = strings[2],
+                    ДатаВыдачи = Convert.ToDateTime(strings[3])
                 });
-                if ()
+                if (wID == stBook[j].НомерСтудента &&
+                    wNameBook == stBook[j].НомерКниги &&
+                    Convert.ToInt32(wCount) <= Convert.ToInt32(stBook[j].Количество))
                 {
                     retBook.НомерСтудента = stBook[j].НомерСтудента;
                     retBook.НомерКниги = stBook[j].НомерКниги;
@@ -112,49 +156,13 @@ namespace ll
 
         private void Search_TextChanged3(object sender, TextChangedEventArgs e)
         {
-            List<string> lines1 = File.ReadAllLines(_pathStudent).ToList();
-            List<StudentInfo> students = new();
-
-            for (int i = 0; i < lines1.Count; i++)
-            {
-                string[] strings = lines1[i].Split(".");
-                students.Add(new()
-                {
-                    Id = strings[0],
-                    Surname = strings[1].ToLower(),
-                    Name = strings[2],
-                    Group = strings[3],
-                    Phone = strings[4],
-                    Adress = strings[5]
-                });
-                if (students[i].Group.ToLower() == group.Text.ToLower() &&
-                    students[i].Surname.ToLower() == surname.Text.ToLower() &&
-                    students[i].Name.ToLower() == name.Text.ToLower())
-                    wID = students[i].Id;
-            }
+            
         }
 
 
         private void Search_TextChanged4(object sender, TextChangedEventArgs e)
         {
-            List<string> lines2 = File.ReadAllLines(_pathCatalog).ToList();
-            List<BookInfo> books = new();
-
-            for (int i = 0; i < lines2.Count; i++)
-            {
-                string[] strings = lines2[i].Split(".");
-                books.Add(new()
-                {
-                    Автор = strings[0],
-                    Название = strings[1],
-                    Жанр = strings[2],
-                    Номер = strings[3],
-                    Издание = strings[4],
-                    Страницы = strings[5]
-                });
-                if (books[i].Название.ToLower().Contains(nameBook.Text.ToLower()))
-                    wNameBook = books[i].Номер;
-            }
+            
         }
 
         private void Search_TextChanged5(object sender, TextChangedEventArgs e) =>

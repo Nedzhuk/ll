@@ -28,10 +28,8 @@ namespace ll
             public int Цена { get; set; }
         }
         private readonly string _path = "SaleBooks.txt";
-        public SaleBook()
-        {
+        public SaleBook() =>
             InitializeComponent();
-        }
 
         private void Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -42,7 +40,7 @@ namespace ll
             List<string> lines = File.ReadAllLines(_path).ToList();
             List<BookInfo> books = new();
 
-            for (int i = 0; i < lines.Count; i++)
+            for (int i = 0; i < lines.Count-1; i++)
             {
                 string[] strings = lines[i].Split(".");
                 books.Add(new()
@@ -65,7 +63,7 @@ namespace ll
             List<string> lines = File.ReadAllLines(_path).ToList();
             List<BookInfo> books = new();
 
-            for (int i = 0; i < lines.Count; i++)
+            for (int i = 0; i < lines.Count-1; i++)
             {
                 string[] strings = lines[i].Split(".");
                 BookInfo book = new()

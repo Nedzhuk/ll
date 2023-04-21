@@ -72,3 +72,15 @@ C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\AddReturn.g
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\Return.g.cs
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\AddReturn.baml
 C:\Users\шечковано\Source\Repos\ll\obj\Debug\net6.0-windows\Return.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\AddReturn.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\BookStud.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\BookStudAdd.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\Return.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\SaleBook.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\AddReturn.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\BookStud.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\BookStudAdd.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\Return.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\SaleBook.baml
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\avvv.g.cs
+C:\Users\Nadezhdin\source\repos\ll\obj\Debug\net6.0-windows\avvv.baml

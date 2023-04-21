@@ -22,6 +22,10 @@ namespace ll
     {
         public MainWindow()
         {
+            Visibility = Visibility.Collapsed;
+            if (new avvv().ShowDialog() == true)
+                Visibility = Visibility.Visible;
+            else Application.Current.Shutdown();
             InitializeComponent();
         }
 
