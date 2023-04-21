@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\шечковано\\Source\\Repos\\ll\\ll.csproj": {}
+    "C:\\Users\\шечковано\\source\\repos\\ll\\ll.csproj": {}
   },
   "projects": {
-    "C:\\Users\\шечковано\\Source\\Repos\\ll\\ll.csproj": {
+    "C:\\Users\\шечковано\\source\\repos\\ll\\ll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\шечковано\\Source\\Repos\\ll\\ll.csproj",
+        "projectUniqueName": "C:\\Users\\шечковано\\source\\repos\\ll\\ll.csproj",
         "projectName": "ll",
-        "projectPath": "C:\\Users\\шечковано\\Source\\Repos\\ll\\ll.csproj",
+        "projectPath": "C:\\Users\\шечковано\\source\\repos\\ll\\ll.csproj",
         "packagesPath": "C:\\Users\\шечковано\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\шечковано\\Source\\Repos\\ll\\obj\\",
+        "outputPath": "C:\\Users\\шечковано\\source\\repos\\ll\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\шечковано\\AppData\\Roaming\\NuGet\\NuGet.Config",
