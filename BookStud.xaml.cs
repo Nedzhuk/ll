@@ -25,6 +25,7 @@ namespace ll
             public int Количество { get; set; }
             public DateTime ДатаВыдачи { get; set; }
         }
+
         private string _pathPurchases = "BookStud.txt";
         public BookStud() =>
             InitializeComponent();
